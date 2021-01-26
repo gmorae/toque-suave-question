@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap'); 
+
+:root {
+  --cian-light: #a2fae4;
+  --cian: #3aab9a;
+  --pink: #fc566f;
+  --wine: #9e2437;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lora', serif;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
