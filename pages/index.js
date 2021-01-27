@@ -83,7 +83,7 @@ export default function Home() {
                 <img onClick={() => handleEdit()} src="/icon-edit.svg" alt="icon edit" />
               </div>
               <p>{massageItem.description}</p>
-              <button onClick={() => handleToStep()} className="cian">Confirmar</button>
+              <button onClick={() => handleToStep()} className="cian">Próximo passo</button>
             </motion.main>
           )
           : (
