@@ -19,6 +19,9 @@
 }
 
 @media (max-width: 420px) {
+  .container {
+    padding: 0 24px;
+  }
   .container img {
     width: 100%;
   }
