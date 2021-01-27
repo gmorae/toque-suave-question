@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
-
+import Link from 'next/link'
 import Head from 'next/head'
+
 import { useState } from "react"
 import styles from '../styles/Home.module.css'
 
@@ -54,10 +55,6 @@ export default function Home() {
     },
   ]
 
-  const handleToStep = () => {
-    console.log('o')
-  }
-
   const handleEdit = () => {
     setMassageItem('')
   }
@@ -80,10 +77,17 @@ export default function Home() {
                 <h1>
                   {massageItem.name}
                 </h1>
-                <img onClick={() => handleEdit()} src="/icon-edit.svg" alt="icon edit" />
+                <motion.img
+                  whileHover={{ scale: 1.5 }}
+                  onClick={() => handleEdit()}
+                  src="/icon-edit.svg"
+                  alt="icon edit"
+                />
               </div>
               <p>{massageItem.description}</p>
-              <button onClick={() => handleToStep()} className="cian">Próximo passo</button>
+              <Link href="/passoOne">
+                <button className="cian">Próximo passo</button>
+              </Link>
             </motion.main>
           )
           : (
