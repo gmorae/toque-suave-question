@@ -5,6 +5,7 @@
   --cian: #3aab9a;
   --pink: #fc566f;
   --wine: #9e2437;
+  --white: #FFF;
 }
 
 * {
@@ -17,4 +18,29 @@
 
 *:focus {
   outline: none;
+}
+
+button { 
+  border: 0;
+  outline: 0;
+  height: 45px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  transition: all 2s;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+button.cian {
+  color: var(--white);
+  background: var(--cian) ;
 }
