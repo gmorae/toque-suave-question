@@ -99,7 +99,7 @@ export default function Home() {
               />
 
               <motion.select
-                animate={{ scale: 2 }}
+                animate={{ scale: [0.5, 1] }}
                 transition={{ duration: 1.5 }}
                 className={styles.select}
                 value={massage}

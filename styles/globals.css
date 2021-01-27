@@ -19,11 +19,7 @@
   outline: none;
 }
 
-body,
-input,
-section,
-option,
-button {
+body, input, section, option, button {
   font-family: 'Lora', serif;
 }
 
@@ -43,7 +39,7 @@ button {
 }
 
 button:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 button.cian {
@@ -51,25 +47,18 @@ button.cian {
   background: var(--cian);
 }
 
-section select {
-  outline: 0;
-  box-shadow: none;
-  font-family: 'Lora', serif;
-  border: 0 !important;
+button.disable {
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
-section option {
-  padding: 64px !important;
-  font-family: 'Lora', serif;
-  font-size: 16px;
+form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-section option:focus {
-  background: var(--wine) !important
-}
-
-input {
-  flex: 1;
+input, select {
   background: var(--white);
   border-radius: 8px;
   border: 0;
@@ -77,13 +66,41 @@ input {
   font-size: 16px;
   color: var(--cian);
   border: 1px solid var(--cian);
+  margin-top: 12px;
+  width: 100%;
 }
 
-input::placeholder {
+input::placeholder, select::placeholder {
   color: var(--cian);
 }
 
-input + input {
-  margin-bottom: 24px;
-  margin-left: 24px;
+input:focus, select:focus {
+  border: 1px solid var(--pink);
+}
+
+input:focus::placeholder, select:focus::placeholder {
+  color: var(--pink);
+}
+
+.box {
+  width: 100%;
+  padding: 24px 42px;
+  background: var(--white);
+  box-shadow: 0px 0px 25px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.container {
+  background: url('/bg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .container {
+    background: var(--white)
+  }
+  form {
+    grid-template-columns: 1fr
+  }
 }

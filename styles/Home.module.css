@@ -42,6 +42,13 @@
 }
 
 @media (max-width: 468px) {
+
+  .container {
+    background: url('/bg_mobile.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
   .container section img {
     width: 100%;
   }
