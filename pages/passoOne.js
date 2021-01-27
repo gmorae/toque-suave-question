@@ -61,7 +61,7 @@ export default function PassoOne() {
                     <InputMask mask="+5\5 (99) 99999-9999" disableUnderline  type="tel" placeholder="Celular/WhatsApp" />
                     <InputMask mask="99/99/9999" type="tel" disableUnderline  placeholder="Data de Nascimento" />
                     <select className="select">
-                        <option disabled value="">Selecione um sexo</option>
+                        <option disabled selected value="">Selecione um sexo</option>
                         <option value="M">Masculino</option>
                         <option value="F">Feminino</option>
                     </select>
