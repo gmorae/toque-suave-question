@@ -1,11 +1,15 @@
-import { motion } from "framer-motion"
-import Head from 'next/head'
 import { useEffect, useState } from "react"
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { motion } from "framer-motion"
 import InputMask from "react-input-mask";
 
 import styles from '../../styles/PassoOne.module.css'
+import { route } from "next/dist/next-server/server/router";
 
 export default function index() {
+
+    const router = useRouter()
 
     const [animateLogo, setAnimateLogo] = useState()
     const [animateForm, setAnimateForm] = useState()
@@ -43,10 +47,10 @@ export default function index() {
             objetivo
         }
 
-        console.log(formData);
-
-        if(!!formData) {
+        if(!name, !email, !phone, !date, !genre) {
             alert('Preencha todos os campos para prosseguir')
+        } else {
+            router.push('2')
         }
     }
 
