@@ -3,9 +3,9 @@ import Head from 'next/head'
 import { useEffect, useState } from "react"
 import InputMask from "react-input-mask";
 
-import styles from '../styles/PassoOne.module.css'
+import styles from '../../styles/PassoOne.module.css'
 
-export default function PassoOne() {
+export default function index() {
 
     const [animateLogo, setAnimateLogo] = useState()
     const [animateForm, setAnimateForm] = useState()

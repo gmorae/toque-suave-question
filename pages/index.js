@@ -85,7 +85,7 @@ export default function Home() {
                 />
               </div>
               <p>{massageItem.description}</p>
-              <Link href="/passoOne">
+              <Link href="/step/1">
                 <button className="cian">Próximo passo</button>
               </Link>
             </motion.main>
