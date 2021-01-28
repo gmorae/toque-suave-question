@@ -21,37 +21,37 @@ export default function Home() {
       id: 1,
       name: 'Massagem relaxante',
       value: 'Massagem relaxante',
-      description: 'Descrião de Massagem relaxante'
+      description: 'Técnica manual suave, possui o objetivo de promover relaxamento físico e mental. Pode ser utilizada como prevenção de estresse, ansiedade, dores, etc. ou para aliviar esses fatores. Proporciona melhora do sono. Quem não ama uma massagem relaxante né?'
     },
     {
       id: 2,
       name: 'Massagem com pedras quentes',
       value: 'Massagem com pedras quentes',
-      description: 'Descrião de Massagem com pedras quentes'
+      description: 'É uma termoterapia relaxante, com potencial energético, feita com pedras vulcânicas aquecidas. Possui diversos benefícios, sendo o alívio de tensões o principal deles. A aplicação das pedras quentes é realizada em combinação com manobras manuais. A troca de temperatura otimiza o relaxamento.'
     },
     {
       id: 3,
       name: 'Massagem modeladora',
       value: 'Massagem modeladora',
-      description: 'Descrião de Massagem modeladora'
+      description: 'Composta por movimentos intensos, o principal objetivo dessa técnica é remodelar as curvaturas corporais. Feita com creme/gel termoativo que potencializa o tratamento. Realizada manualmente, com auxílio de bambus e principalmente em locais com gordura localizada. Vem intensificar o seu projeto verão!'
     },
     {
       id: 4,
       name: 'Massagem terapêutica',
       value: 'Massagem terapêutica',
-      description: 'Descrião de Massagem terapêutica'
+      description: 'Terapia manual com foco no tratamento de dores, gerando alívio, sejam elas geradas por questões emocionais, esforço físico, má postura ou patologias propriamente ditas. Assim como a massagem relaxante: atua trazendo benefícios físicos e mentais. Cuide-se bem!'
     },
     {
       id: 5,
       name: 'Drenagem linfática',
       value: 'Drenagem linfática',
-      description: 'Descrião de Drenagem linfática'
+      description: 'Procedimento suave, superficial cujo foco é otimizar a circulação e eliminação da linfa presente em nosso corpo. Resulta na redução do inchaço, promove relaxamento, entre outros benefícios. Pode ser feita como prevenção ou tratamento. Xô inchaço!'
     },
     {
       id: 6,
       name: 'Bambuterapia',
       value: 'Bambuterapia',
-      description: 'Descrião de Bambuterapia'
+      description: 'Técnica  relaxante complementar feita inteiramente com bambus. Possui propriedades drenantes, relaxantes, tonificantes, modeladoras e energéticas. O uso dos bambus permite realizar manobras mais profundas. É bem eficiente e promove benefícios ao corpo e à mente. Se a massagem relaxante já é boa, imagina só a bambuterapia!'
     },
   ]
 
