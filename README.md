@@ -20,15 +20,19 @@ Questões para avaliação para o toque suave
 - Esta gestante ou com suspeita ? (sim ou não)
 - Fez cirurgia recentemente ? (sim ou não, se sim quando e onde)
 - Apresenta dor (sim ou não, Aonde) 
+- Tem algum metal no corpo 
 
 ## Passo 3 
 
-- Pratica atividade fisica 
-  - com qual frequencia e há quanto tempo ? 
-- Ingere bastante liquido
-- Sua alimentação é saudavel
-- Tem algum metal no corpo
+- Pratica atividade fisica (sim ou não, se sim com qual frequencia )
+- Ingere bastante liquido (sim ou não)
+- Sua alimentação é saudavel (sim ou não)
+- Você ja fez massagem alguma vez ? (sim ou não)
 
 ## Passo 4
 
 - Final - pedindo a veracidade das informações 
+
+-----------------------------------------------------
+
+# Agendamendo 
