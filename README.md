@@ -13,16 +13,13 @@ Questões para avaliação para o toque suave
 
 ## Passo 2
 
-- Possui alergia
-- Faz uso de medicação
-- Como funciona seu intestino 
-- Posui alguma doença listada abaixo ?
-  - Topicos...
-- Esta gestante ou com suspeita ? 
-- Fez cirurgia recentemente ? 
-  - Quando e onde ? 
-- Apresenta dor ? 
-  - Aonde ? 
+- Possui alergia ( Sim ou não, se tiver escreve qual é)
+- Faz uso de medicação ( Sim ou não, se tiver escreve quel é)
+- Como funciona seu intestino (Select)
+- Posui alguma condições listada abaixo ? (Select, se estiver selecionado outros abrir o input para escrever)
+- Esta gestante ou com suspeita ? (sim ou não)
+- Fez cirurgia recentemente ? (sim ou não, se sim quando e onde)
+- Apresenta dor (sim ou não, Aonde) 
 
 ## Passo 3 
 
