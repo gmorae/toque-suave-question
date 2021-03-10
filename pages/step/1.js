@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import InputMask from "react-input-mask";
 
 import styles from '../../styles/PassoOne.module.css'
-import { route } from "next/dist/next-server/server/router";
 
 export default function index() {
 
@@ -123,7 +122,7 @@ export default function index() {
                     />
                 </form>
 
-                <button className="cian" onClick={() => handleToNextStep()} >Próximo passo</button>
+                <button className="cian" onClick={handleToNextStep} >Próximo passo</button>
             </motion.main>
 
         </div>

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
-
 :root {
   --cian-light: #a2fae4;
   --cian: #3aab9a;
@@ -48,7 +47,7 @@ button.cian {
   background: var(--cian);
 }
 
-button.disable {
+button:disabled {
   cursor: not-allowed;
   opacity: 0.7;
 }
@@ -59,7 +58,7 @@ form {
   gap: 24px;
 }
 
-input, select {
+input:not(input[type=radio]), select {
   background: var(--white);
   border-radius: 8px;
   border: 0;
@@ -95,6 +94,50 @@ input:focus::placeholder, select:focus::placeholder {
   background: url('/bg.png');
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+.form-group .radios {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.form-check {
+  display: flex;
+}
+
+.form-check input[type=radio], .form-check input[type=checkbox] {
+  display: none;
+}
+
+.form-check label {
+  cursor: pointer;
+  color: var(--cian);
+}
+
+.form-check input[type="radio"]+label:before, .form-check input[type="checkbox"]+label:before {
+  border: 1px solid var(--cian);
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  height: 14px;
+  width: 14px;
+  padding: 0;
+  vertical-align: top;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.form-check input[type="radio"]:checked+label:before, .form-check input[type="checkbox"]:checked+label:before {
+  background: var(--pink);
+  color: #FFF;
+  content: "\2713";
+  font-size: 12px;
+  text-align: center;
+  margin-right: 8px;
+
 }
 
 @media (max-width: 768px) {

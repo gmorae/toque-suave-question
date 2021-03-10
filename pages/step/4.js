@@ -42,11 +42,12 @@ export default function index() {
                 transition={{ duration: 2 }}
                 className="box"
             >
-                <h1>2. Dados Clínicos</h1>
+                <h1>4. Resumo</h1>
 
 
 
-                <button className="cian" onClick={() => { }} >Próximo passo</button>
+                <button style={{ margin: 'auto' }} disabled className="cian" onClick={() => { }} >Finalizar</button>
+
             </motion.main>
 
         </div>
