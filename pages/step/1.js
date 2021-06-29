@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { motion } from "framer-motion"
 import InputMask from "react-input-mask";
 
 import styles from '../../styles/PassoOne.module.css'
+import { QuestionsContext } from "../../contexts/questionsContext";
 
 export default function index() {
+
+    const { setQuestion } = useContext(QuestionsContext)
 
     const router = useRouter()
 
@@ -38,7 +41,7 @@ export default function index() {
     const handleToNextStep = () => {
         const formData = {
             name,
-            email, 
+            email,
             date,
             phone,
             genre,
@@ -46,9 +49,10 @@ export default function index() {
             objetivo
         }
 
-        if(!name, !email, !phone, !date, !genre) {
+        if (!name, !email, !phone, !date, !genre) {
             alert('Preencha todos os campos para prosseguir')
         } else {
+            setQuestion(1, formData)
             router.push('2')
         }
     }
@@ -122,7 +126,7 @@ export default function index() {
                     />
                 </form>
 
-                <button className="cian" onClick={handleToNextStep} >Próximo passo</button>
+                <button style={{ margin: 'auto' }} className="cian" onClick={handleToNextStep} >Próximo passo</button>
             </motion.main>
 
         </div>

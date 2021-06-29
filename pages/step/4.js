@@ -1,13 +1,18 @@
 import { motion } from "framer-motion"
 import Head from 'next/head'
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { QuestionsContext } from "../../contexts/questionsContext"
 
 import styles from '../../styles/PassoOne.module.css'
 
 export default function index() {
 
+    const { setQuestion, complete } = useContext(QuestionsContext)
+
     const [animateLogo, setAnimateLogo] = useState()
     const [animateForm, setAnimateForm] = useState()
+
+    const [veracidade, setVeracidade] = useState(``)
 
     useEffect(() => {
 
@@ -23,11 +28,18 @@ export default function index() {
 
     }, [])
 
+    useEffect(() => {
+        const formData = {
+            veracidade
+        }
+        setQuestion(4, formData)
+    }, [veracidade])
+
     return (
 
         <div className={`${styles.container} container`}>
             <Head>
-                <title>Questionário - Toque suave - Passo 1</title>
+                <title>Questionário - Resumo</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -44,9 +56,35 @@ export default function index() {
             >
                 <h1>4. Resumo</h1>
 
+                <div className="form-group">
+                    <span>Pratica alguma atividade física ?</span>
+                    <div className="radios">
 
+                        <div className="form-check">
+                            <input
+                                type="radio"
+                                name="veracidade"
+                                onChange={text => setVeracidade(text.target.value)}
+                                value="S"
+                                id="veracidadeSim"
+                            />
+                            <label for="veracidadeSim">Sim</label>
+                        </div>
 
-                <button style={{ margin: 'auto' }} disabled className="cian" onClick={() => { }} >Finalizar</button>
+                        <div className="form-check">
+                            <input
+                                type="radio"
+                                name="veracidade"
+                                onChange={text => setVeracidade(text.target.value)}
+                                value="N"
+                                id="veracidadeNao"
+                            />
+                            <label for="veracidadeNao">Não</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button style={{ margin: 'auto' }}  className="cian" onClick={() => complete()} >Finalizar</button>
 
             </motion.main>
 

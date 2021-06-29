@@ -1,10 +1,16 @@
 import { motion } from "framer-motion"
 import Head from 'next/head'
-import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import { useContext, useEffect, useState } from "react"
+import { QuestionsContext } from "../../contexts/questionsContext"
 
 import styles from '../../styles/PassoOne.module.css'
 
 export default function index() {
+
+    const { setQuestion } = useContext(QuestionsContext)
+
+    const router = useRouter()
 
     const [animateLogo, setAnimateLogo] = useState()
     const [animateForm, setAnimateForm] = useState()
@@ -28,11 +34,27 @@ export default function index() {
 
     }, [])
 
+    const handleToNextStep = () => {
+        const formData = {
+            atividadeFisica,
+            liquido,
+            alimentacao,
+            massagem
+        }
+
+        if (!formData) {
+            alert('Preencha todos os campos para prosseguir')
+        } else {
+            setQuestion(3, formData)
+            router.push('4')
+        }
+    }
+
     return (
 
         <div className={`${styles.container} container`}>
             <Head>
-                <title>Questionário - Toque suave - Passo 1</title>
+                <title>Questionário - Toque suave - Passo 3</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -161,7 +183,7 @@ export default function index() {
                     </div>
                 </form>
 
-                <button className="cian" onClick={() => { }} >Próximo passo</button>
+                <button style={{ margin: 'auto' }}  className="cian" onClick={handleToNextStep} >Próximo passo</button>
             </motion.main>
 
         </div>

@@ -1,12 +1,15 @@
 import { motion } from "framer-motion"
 import Head from 'next/head'
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useRouter } from 'next/router'
 import InputMask from "react-input-mask";
 
 import styles from '../../styles/PassoOne.module.css'
+import { QuestionsContext } from "../../contexts/questionsContext";
 
 export default function index() {
+
+    const { setQuestion } = useContext(QuestionsContext)
 
     const router = useRouter()
 
@@ -51,6 +54,7 @@ export default function index() {
         if (!formData) {
             alert('Preencha todos os campos para prosseguir')
         } else {
+            setQuestion(2, formData)
             router.push('3')
         }
     }
@@ -59,7 +63,7 @@ export default function index() {
 
         <div className={`${styles.container} container`}>
             <Head>
-                <title>Questionário - Toque suave - Passo 1</title>
+                <title>Questionário - Toque suave - Passo 2</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -266,7 +270,7 @@ export default function index() {
                     </select>
                 </form>
 
-                <button className="cian" onClick={handleToNextStep} >Próximo passo</button>
+                <button style={{ margin: 'auto' }}  className="cian" onClick={handleToNextStep} >Próximo passo</button>
             </motion.main>
 
         </div>
