@@ -19,7 +19,6 @@ export default function index() {
     const [alergia, setAlergia] = useState('N')
     const [medicacao, setMedicacao] = useState('N')
     const [gestante, setGestante] = useState('')
-    const [intestino, setIntestino] = useState('N')
     const [condicoes, setCondicoes] = useState('')
     const [cirurgia, setCirurgia] = useState('N')
     const [dor, setDor] = useState('N')
@@ -44,7 +43,6 @@ export default function index() {
             alergia,
             medicacao,
             gestante,
-            intestino,
             condicoes,
             cirurgia,
             dor,
@@ -54,7 +52,7 @@ export default function index() {
         if (!formData) {
             alert('Preencha todos os campos para prosseguir')
         } else {
-            setQuestion(2, formData)
+            setQuestion(3, formData)
             router.push('3')
         }
     }
@@ -261,9 +259,6 @@ export default function index() {
                         </div>
                         {ferida === 'S' && <input type="text" placeholder="Aonde ? " />}
                     </div>
-                    <select name="intestino" value={intestino} onChange={text => setIntestino(text.target.value)}>
-                        <option disabled selected value="">Como funciona seu intestino ? </option>
-                    </select>
 
                     <select name="condicoes" value={condicoes} onChange={text => setCondicoes(text.target.value)}>
                         <option disabled selected value="">Posui algumas das condições listadas abaixo ? </option>

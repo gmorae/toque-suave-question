@@ -52,7 +52,7 @@ export default function index() {
         if (!name, !email, !phone, !date, !genre) {
             alert('Preencha todos os campos para prosseguir')
         } else {
-            setQuestion(1, formData)
+            setQuestion(2, formData)
             router.push('2')
         }
     }

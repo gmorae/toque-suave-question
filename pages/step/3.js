@@ -45,7 +45,7 @@ export default function index() {
         if (!formData) {
             alert('Preencha todos os campos para prosseguir')
         } else {
-            setQuestion(3, formData)
+            setQuestion(4, formData)
             router.push('4')
         }
     }

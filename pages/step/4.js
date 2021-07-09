@@ -32,7 +32,7 @@ export default function index() {
         const formData = {
             veracidade
         }
-        setQuestion(4, formData)
+        setQuestion(5, formData)
     }, [veracidade])
 
     return (

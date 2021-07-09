@@ -2,10 +2,14 @@ import { motion } from "framer-motion"
 import Link from 'next/link'
 import Head from 'next/head'
 
-import { useState } from "react"
+import { useState, useContext } from "react";
+import { QuestionsContext } from "../contexts/questionsContext"
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  const { setQuestion } = useContext(QuestionsContext)
+
 
   const [massage, setMassage] = useState('')
   const [massageItem, setMassageItem] = useState()
@@ -14,6 +18,7 @@ export default function Home() {
     const [optionsFiltered] = options.filter(option => option.name === text);
     setMassage(text)
     setMassageItem(optionsFiltered);
+    setQuestion(1, { typeMassage: optionsFiltered.value })
   }
 
   const options = [

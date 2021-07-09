@@ -1,9 +1,12 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useState } from 'react'
 
-export const QuestionsContext = createContext()
+export const QuestionsContext = createContext();
+
+import firebase from '../firebase'
 
 export function QuestionsProvider({ children }) {
 
+  const [step0, setStep0] = useState()
   const [step1, setStep1] = useState()
   const [step2, setStep2] = useState()
   const [step3, setStep3] = useState()
@@ -12,18 +15,22 @@ export function QuestionsProvider({ children }) {
   function setQuestion(step, data) {
     switch (step) {
       case 1:
-        setStep1(data)
+        setStep0(data)
+        console.log(data, step0)
         break;
       case 2:
-        setStep2(data)
+        setStep1(data)
         break;
       case 3:
-        setStep3(data)
+        setStep2(data)
         break;
       case 4:
+        setStep3(data)
+        break;
+      case 5:
         setStep4(data)
         break;
-    
+
       default:
         break;
     }
@@ -31,17 +38,14 @@ export function QuestionsProvider({ children }) {
 
   async function complete() {
     const data = {
-      step1,
-      step2,
-      step3,
-      step4,
+      ...step0,
+      ...step1,
+      ...step2,
+      ...step3,
+      ...step4,
     }
 
-    console.log(`step1 => ${step1}`)
-    console.log(`step2 => ${step2}`)
-    console.log(`step3 => ${step3}`)
-    console.log(`step4 => ${step4}`)
-    console.log(data)
+    firebase.firestore().collection('users').add(data);
   }
 
   return (
